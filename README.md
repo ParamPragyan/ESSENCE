@@ -51,4 +51,6 @@ If the user will slouch for more than 10s the app will send desktop notification
 
 ## Made by:
 
+- [Param Pragyan](https://github.com/ParamPragyan)
 - [Susaksham Jain](https://twitter.com/Susaksham08)
+
