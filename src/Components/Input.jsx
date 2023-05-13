@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import moment from 'moment/moment'
-import './input.css'
+// import './input.css'
 let interval
 function Input(props) {
   const [timeLeft, setTimeLeft] = useState(0)
@@ -27,7 +27,6 @@ function Input(props) {
       clearInterval(interval)
       clearInterval(props.intervalRef.current)
     }
-    console.log(difference)
     console.log('calculating')
     setTimeLeft(timeLeft)
     console.log(timeLeft)
@@ -51,7 +50,7 @@ function Input(props) {
   }, [props.flag])
 
   return (
-    <div className="time">
+    <div className="time text-[10rem] ">
       <div>{/* <UseCountDown></UseCountDown> */}</div>
       {timeLeft.hours || timeLeft.minutes || timeLeft.seconds ? (
         <p>
@@ -66,7 +65,7 @@ function Input(props) {
           </span>
         </p>
       ) : (
-        <p>{`${props.hour}:${props.minutes}:00`}</p>
+        <p className='text-[4rem]' >{`${props.hour}:${props.minutes}:00`}</p>
       )}
     </div>
   )

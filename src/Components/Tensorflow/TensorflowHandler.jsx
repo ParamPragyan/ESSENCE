@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState, useMemo, useCallback } from 'react'
 import * as tf from '@tensorflow/tfjs'
 import * as posenet from '@tensorflow-models/posenet'
-import { showNotification } from '../notification'
+import { showNotification } from '../Notification'
 import Webcam from 'react-webcam'
-import Input from '../input/Input'
+import Input from '../Input'
 import moment from 'moment'
 let interval
 function TenserFlowHandler(props) {
