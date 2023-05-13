@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import leftImg from "../../public/left-img.png"
 
 const HomeEssence = () => {
   return (
@@ -39,7 +40,7 @@ const HomeEssence = () => {
         </div>
         <div className="right flex flex-col">
           <div className="left-img w-[50rem]">
-            <img src="./public/left-img.png" alt="" />
+            <img src={leftImg} alt="" />
           </div>
           <div className="nav-btn-container h-[fit-contained] py-[6rem] px-[2rem] rounded-[20rem]  mt-[1.5rem] ml-[8rem]  ">
             <button className="navbtn ">
