@@ -105,15 +105,15 @@ function TenserFlowHandler(props) {
   )
 }
 
-if (Notification.permission === 'granted') {
-  showNotification()
-} else if (Notification.permission !== 'denied') {
-  Notification.requestPermission().then((permission) => {
-    if (permission === 'granted') {
-      showNotification()
-    }
-  })
-}
+// if (Notification.permission === 'granted') {
+//   showNotification()
+// } else if (Notification.permission !== 'denied') {
+//   Notification.requestPermission().then((permission) => {
+//     if (permission === 'granted') {
+//       showNotification()
+//     }
+//   })
+// }
 
 /* <ReactAudioPlayer
   src="1663436351494-voicemaker.in-speech.mp3"
