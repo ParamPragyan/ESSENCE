@@ -6,7 +6,7 @@ const HomeEssence = () => {
   return (
     <div className="h-[100vh] flex flex-col justify-around w-full bg-gradient-to-r from-[#baffdf] to-[#f6fffc]">
       <div className="logo flex flex-col items-center justify-center pt-[0rem]">
-        <img className="w-[2.5rem] h-[2.5rem]" src="./public/logo.png" alt="" />
+        <img className="w-[2.5rem] h-[2.5rem]" src="../../public/logo.png" alt="" />
         <h1 className="logo-txt text-[#156669] font-[roca] font-bold text-[2rem]">
           ESSENCE
         </h1>
@@ -65,13 +65,13 @@ const HomeEssence = () => {
           <li>
             {" "}
             <a href="">
-              <img src="./public/github.svg" alt="" />
+              <img src="../../public/github.svg" alt="" />
             </a>{" "}
           </li>
           <li>
             {" "}
             <a href="">
-              <img src="./public/twitter.svg" alt="" />
+              <img src="../../public/twitter.svg" alt="" />
             </a>{" "}
           </li>
         </ul>
