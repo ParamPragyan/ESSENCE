@@ -1,6 +1,9 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import leftImg from "../../public/left-img.png"
+import github from "../../public/github.svg"
+import linkedin from "../../public/linkedin.svg"
+import twitter from "../../public/twitter.svg"
 
 const HomeEssence = () => {
   return (
@@ -59,19 +62,19 @@ const HomeEssence = () => {
           <li>
             {" "}
             <a href="">
-              <img src="./public/linkedin.svg" alt="" />
+              <img src={linkedin} alt="" />
             </a>{" "}
           </li>
           <li>
             {" "}
             <a href="">
-              <img src="../../public/github.svg" alt="" />
+              <img src={github} alt="" />
             </a>{" "}
           </li>
           <li>
             {" "}
             <a href="">
-              <img src="../../public/twitter.svg" alt="" />
+              <img src={twitter} alt="" />
             </a>{" "}
           </li>
         </ul>
