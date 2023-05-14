@@ -1,3 +1,8 @@
+.home{
+  /* background: url(../public/wave-haikei.svg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .input {
     background: none;
     border: none;
@@ -13,9 +18,8 @@
   -1px -1px 6px rgba(255, 255, 255, 0.4);
   }
   .wrapper{
-
-box-shadow:  20px 20px 60px #7d9c8e,
-             -20px -20px 60px #bdd2c8;
+    box-shadow:  29px 29px 37px #010a10,
+    -29px -29px 47px #031e30;
   }
 
   .icon-btn {
@@ -48,4 +52,83 @@ box-shadow:  20px 20px 60px #7d9c8e,
   }
   button:active .icon-btn {
     transform: scale(0.95);
+  }
+
+  .left-img {
+    animation: blob 10s infinite linear alternate;
+  }
+
+  .img-container{
+    background: #021a29;
+box-shadow:  29px 29px 57px #010a10,
+             -29px -29px 57px #031e30;
+    /* border-radius: 56% 44% 28% 72% / 38% 33% 67% 62% ; */
+    animation: blob 10s infinite linear alternate;
+
+  }
+
+  .nav-link{
+    background: #021420;
+box-shadow:  29px 29px 57px #010a10,
+             -29px -29px 57px #031e30;
+    border-radius: 56% 44% 28% 72% / 38% 33% 67% 62% ;
+  }
+
+  .m-txt{
+    filter: drop-shadow(5px 5px 2px rgb(10, 142, 147));
+  }
+  /* .lower-txt {
+    box-shadow:  29px 29px 57px #010a10,
+             -29px -29px 57px #021929;
+  } */
+
+  .upt{
+    -webkit-text-stroke: 1px #7cbebf;
+   color: transparent;
+   text-shadow:
+       3px 3px 0 #000000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+  .main-side-txt{
+    /* box-shadow:  5px 5px 0px #b7c5cc; */
+             
+  }
+
+  .tag{
+    backdrop-filter: blur(56px);
+    background-color: rgba(255, 255, 255, 0.818);
+    border-radius: 5px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    filter: drop-shadow(0 0 5px rgb(237, 233, 233));
+  
+  }
+
+  .icon:hover{
+    color: #fff;
+    filter: drop-shadow(0 0 10px white);
+  }
+
+  @keyframes blob {
+    0% {
+      border-radius: 56% 44% 28% 72% / 38% 33% 67% 62%;
+    }
+
+    25%{
+        border-radius: 50% ;
+    }
+    50% {
+      border-radius: 68% 32% 83% 17% / 41% 52% 48% 59% ;
+    }
+
+    75% {
+      border-radius: 50%;
+    }
+
+
+    100% {
+      border-radius: 56% 44% 28% 72% / 38% 33% 67% 62%;
+    }
   }

@@ -26,7 +26,7 @@ const DashboardEssence = () => {
   };
   return (
     <div>
-      <div className="container flex items-center justify-center  h-[100vh] text-[#ffffff] bg-gradient-to-r from-[#baffdf] to-[#f6fffc]">
+      <div className="container1 flex items-center justify-center  h-[100vh] text-[#ffffff] bg-[#021420]">
         <div className="wrapper rounded-t-[5rem] h-[40rem] w-[40rem] bg-[#252525] flex items-center justify-center flex-col">
           <div className="button-outer ">
             <form onSubmit={submitHandler} className="buttons flex items-center justify-center flex-col gap-[4rem]">
