@@ -36,7 +36,7 @@ const HomeEssence = () => {
             </h1>
           </div>
           <div className="main-txt">
-            <h1 className="m-txt h-[18vh] text-[#ffffff] font-[Noto+Sans] ml-[-.5rem] font-[900] text-[12rem] leading-[12rem] ">
+            <h1 className="m-txt h-[18vh] text-[#ffffffd6] font-[Noto+Sans] ml-[-.5rem] font-[900] text-[12rem] leading-[12rem] ">
               ESSENCE's{" "}
             </h1>
             <div className="main-side-txt border-[#ffffff] w-[25rem] h-[4.3rem] border-b-[.1rem] border-r-[.1rem] ml-[37rem]">

@@ -74,9 +74,9 @@ box-shadow:  29px 29px 57px #010a10,
     border-radius: 56% 44% 28% 72% / 38% 33% 67% 62% ;
   }
 
-  .m-txt{
+  /* .m-txt{
     filter: drop-shadow(5px 5px 2px rgb(10, 142, 147));
-  }
+  } */
   /* .lower-txt {
     box-shadow:  29px 29px 57px #010a10,
              -29px -29px 57px #021929;
