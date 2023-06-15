@@ -10,6 +10,7 @@ import './App.css'
 function App() {
   return (
     <div className='App h-[100vh]'>
+      <div className="app2 hidden"><h1>This application is essentially created desktop and laptops. Switch to its initial frame to make it functional</h1></div>
       <Routes>
         <Route path='/' element={<HomeEssence/>}/>
         <Route path='/dashboard' element={<DashboardEssence/>}/>

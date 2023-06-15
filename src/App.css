@@ -55,11 +55,13 @@
   }
 
   .left-img {
-    animation: blob 10s infinite linear alternate;
+    /* animation: blob 10s infinite linear alternate; */
+    border-radius: 50%;
   }
 
   .img-container{
-    background: #021a29;
+    /* background: #021a29; */
+    background: #156669;
 box-shadow:  29px 29px 57px #010a10,
              -29px -29px 57px #031e30;
     /* border-radius: 56% 44% 28% 72% / 38% 33% 67% 62% ; */

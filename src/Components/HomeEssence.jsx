@@ -11,7 +11,7 @@ import logo from "../../public/logo2.png"
 
 const HomeEssence = () => {
   return (
-    <div className="h-[100vh] flex flex-col justify-around w-full bg-[#021420] home">
+    <div className="h-[100vh] relative overflow-hidden flex flex-col justify-around w-full bg-[#021420] home">
       <div className="bar flex  items-center justify-between pt-[0rem] mx-[12rem]">
         <div className="bar flex  items-center justify-center ">
           <img
@@ -45,7 +45,7 @@ const HomeEssence = () => {
               </h1>
             </div>
           </div>
-          <div className="lower-txt">
+          {/* <div className="lower-txt">
             <ul className=" text-[#c9c9c9] gap-[20rem] font-[Noto+Sans] font-[700] text-[2.5rem] p-3 mt-[2rem]">
               <li className="flex items-center gap-3 leading-[3rem] ">
                 <IoMdCheckmarkCircleOutline className="h-[2rem] w-[2rem]" />{" "}
@@ -67,7 +67,7 @@ const HomeEssence = () => {
                 </h1>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="nav-btn-container   mt-[3.5rem]  ">
             <button className="navbtn ">
               <NavLink
@@ -93,12 +93,12 @@ const HomeEssence = () => {
             </button>
           </div>
         </div>
-        <div className="right flex flex-col">
-          <div className="img-container w-[55rem] h-[50rem]">
-            <div className="left-img w-[43rem] h-[43rem] flex items-center justify-center rounded-[56% 44% 28% 72% / 38% 33% 67% 62%] bg-[#ffffff]">
+        <div className="right mr-[10rem] flex flex-col">
+          <div className="img-container absolute w-[95rem] h-[90rem]"/>
+            <div className="left-img w-[43rem] z-10 h-[43rem] flex items-center justify-center rounded-[56% 44% 28% 72% / 38% 33% 67% 62%] bg-[#ffffff]">
               <img className="p-[3rem]" src={leftImg} alt="" />
             </div>
-          </div>
+          
         </div>
       </div>
       <div className="icon-container flex items-center justify-between mx-[12rem]">

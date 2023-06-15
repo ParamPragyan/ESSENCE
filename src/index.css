@@ -37,3 +37,15 @@
     #94DDDE
   );
 } */
+
+@media screen and (max-width: 1000px) {
+.App{
+  display: none;
+}
+.app2{
+  display: inline-flex;
+  font-size: 20rem;
+  z-index: 1000;
+  color: black;
+}
+}
