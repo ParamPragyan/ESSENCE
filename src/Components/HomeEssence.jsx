@@ -4,7 +4,7 @@ import leftImg from "../../public/left-img.png";
 import { IoMdCheckmarkCircleOutline } from "react-icons/all";
 import {BsGithub} from "react-icons/bs"
 import {BsLinkedin} from "react-icons/bs"
-import {BsTwitter} from "react-icons/bs"
+import {BsTwitter} from "react-icons/bs"   
 import logo from "../../public/logo2.png"
 
 
@@ -29,21 +29,21 @@ const HomeEssence = () => {
         </div>
       </div>
       <div className="hero-content flex justify-between mx-[12rem]">
-        <div className="left mt-[0rem]">
-          <div className="upper-txt text-[#7cbebf] font-[Montserrat]  font-[800] text-[4rem] leading-[4.5rem]">
-            <h1 className="w-[45rem] upt">
+        <div className="left mt-[0rem] flex flex-col justify-center">
+          <div className="upper-txt text-[#7cbebf] font-[Montserrat]  font-[800] text-[3rem] leading-[4rem]">
+            <h1 className="w-[40rem] upt">
               Say goodbye to neck and back pain with{" "}
             </h1>
           </div>
           <div className="main-txt">
             <h1 className="m-txt h-[18vh] text-[#ffffffd6] font-[Noto+Sans] ml-[-.5rem] font-[900] text-[12rem] leading-[12rem] ">
-              ESSENCE's{" "}
+              ESSENCE{" "}
             </h1>
-            <div className="main-side-txt border-[#ffffff] w-[25rem] h-[4.3rem] border-b-[.1rem] border-r-[.1rem] ml-[37rem]">
+            {/* <div className="main-side-txt border-[#ffffff] w-[25rem] h-[4.3rem] border-b-[.1rem] border-r-[.1rem] ml-[37rem]">
               <h1 className="pl-[7rem] text-[#7cbebf] font-[Noto+Sans] font-bold text-[2rem]">
                 posture alerts."
               </h1>
-            </div>
+            </div> */}
           </div>
           {/* <div className="lower-txt">
             <ul className=" text-[#c9c9c9] gap-[20rem] font-[Noto+Sans] font-[700] text-[2.5rem] p-3 mt-[2rem]">
@@ -68,7 +68,7 @@ const HomeEssence = () => {
               </li>
             </ul>
           </div> */}
-          <div className="nav-btn-container   mt-[3.5rem]  ">
+          <div className="nav-btn-container   mt-[1.5rem]  ">
             <button className="navbtn ">
               <NavLink
                 className="nav-link flex items-center relative overflow-hidden text-[#fff] font-[Montserrat] font-[600] rounded-[20rem] text-[2rem] p-[2rem] pr-[7rem]"
