@@ -1,23 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { Route, Routes } from "react-router-dom";
-import HomeEssence from './Components/HomeEssence';
-import DashboardEssence from './Components/DashboardEssence';
-
-import './App.css'
-
+import "./App.css";
+import { Toaster } from "react-hot-toast";
+import AuthContextProvider from "./store/auth-context";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import DashBoardPage from "./Pages/DashBoardPage";
+import Stats from "./Components/Stats/Stats";
+const router = createBrowserRouter([
+  { path: "/", element: <Navigate to="/home"></Navigate> },
+  {
+    path: "/home",
+    element: <HomePage></HomePage>,
+  },
+  {
+    path: "/dashboard",
+    element: <DashBoardPage></DashBoardPage>,
+  },
+  {
+    path: "/stats/:id",
+    element: <Stats></Stats>,
+  },
+]);
 function App() {
   return (
-    <div className='App h-[100vh]'>
-      <div className="app2 hidden"><h1>This application is essentially created desktop and laptops. Switch to its initial frame to make it functional</h1></div>
-      <Routes>
-        <Route path='/' element={<HomeEssence/>}/>
-        <Route path='/dashboard' element={<DashboardEssence/>}/>
-      </Routes>
-     
-    </div>
-  )
+    <>
+      <AuthContextProvider>
+        <div className="app">
+          <Toaster></Toaster>
+          <RouterProvider router={router}></RouterProvider>
+        </div>
+      </AuthContextProvider>
+    </>
+  );
 }
 
-export default App
+export default App;

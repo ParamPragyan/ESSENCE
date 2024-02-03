@@ -1,0 +1,39 @@
+.container {
+  background-image: url("../../assets/Icons/wave-haikei.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @apply h-[100vh] flex flex-col justify-around w-full;
+}
+
+.icon-btn {
+  background: white;
+  margin-left: 1em;
+  /* position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: 2.2em;
+  /* width: 2.2em; */
+  /* border-radius: 0.7em; */
+  right: 0.3em;
+  transition: all 0.3s;
+  @apply py-[3rem] w-[6rem]  rounded-[50%] mr-[1rem]  bg-[#a1dacd] absolute flex items-center justify-center;
+}
+
+button:hover .icon-btn {
+  width: calc(100% - 3rem);
+  border-radius: 20rem;
+}
+
+.icon-btn svg {
+  color: #156669;
+  transition: transform 0.3s;
+}
+
+button:hover .icon-btn svg {
+  transform: translateX(0.1em);
+}
+button:active .icon-btn {
+  transform: scale(0.95);
+}
