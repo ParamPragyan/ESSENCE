@@ -5,7 +5,7 @@ export function formatDate() {
 }
 
 export const updateTimeSpent = async (id, timeSpent, notified, date) => {
-  const url = `${import.meta.env.VITE_API_END_POINT}/api/user/${id}`; // Replace this with the real API endpoint
+  const url = `${import.meta.env.VITE_API_END_POINT}/user/${id}`; // Replace this with the real API endpoint
   console.log(id, timeSpent, notified, date);
   const options = {
     method: "PUT",
@@ -29,7 +29,7 @@ export const updateTimeSpent = async (id, timeSpent, notified, date) => {
 };
 
 export const getUserStats = async (id) => {
-  const url = `${import.meta.env.VITE_API_END_POINT}/api/user/${id}`;
+  const url = `${import.meta.env.VITE_API_END_POINT}/user/${id}`;
 
   try {
     const response = await fetch(url);
