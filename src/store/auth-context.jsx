@@ -41,7 +41,7 @@ const AuthContextProvider = ({ children }) => {
     };
     try {
       const res2 = await fetch(
-        `${import.meta.env.VITE_API_END_POINT}/auth/register`,
+        `${import.meta.env.VITE_API_END_POINT}/api/auth/register`,
         {
           method: "POST",
           headers: {
@@ -131,7 +131,7 @@ const AuthContextProvider = ({ children }) => {
     };
     try {
       const res2 = await fetch(
-        `${import.meta.env.VITE_API_END_POINT}/auth/login`,
+        `${import.meta.env.VITE_API_END_POINT}/api/auth/login`,
         {
           method: "POST",
           headers: {
