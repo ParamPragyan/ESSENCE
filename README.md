@@ -34,7 +34,7 @@ Things that make Essence an essential part of a software developer's life👩‍
 
 ![image](./src/assets/images/analytics.png)
 
-Try out the beta live - [ESSENCE-WEB](https://essence-omega.vercel.app/home)
+Try out the beta live - [ESSENCE-WEB](https://essence-sage.vercel.app/home)
 
 <blockquote><i>The issue with the live link will be resolve soon.</i></blockquote>
 
