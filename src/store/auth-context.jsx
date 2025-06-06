@@ -18,10 +18,13 @@ export const authCtx = createContext({
   login: () => {},
   logout: () => {},
   register: () => {},
+  showOneTimeNotification: false,
+  setShowOneTimeNotification: () => {},
 });
 
 const AuthContextProvider = ({ children }) => {
   const [token, setToken] = useState("");
+  const [showOneTimeNotification, setShowOneTimeNotification] = useState(false);
   const [userInfo, setUserInfo] = useState({
     userName: "",
     userId: "",
@@ -221,14 +224,20 @@ const AuthContextProvider = ({ children }) => {
       stats: [],
       goals: [],
     });
+    setShowOneTimeNotification(false);
   };
 
+  const setShowOneTimeNotificationHandler = (value) => {
+    setShowOneTimeNotification(true);
+  };
   const storeObj = {
     token,
     userInfo,
     login,
     logout,
     register,
+    showOneTimeNotification,
+    setShowOneTimeNotificationHandler,
   };
   const isAuthIdValid = useCallback(async () => {
     const storageData = JSON.parse(localStorage.getItem("essence"));
@@ -286,7 +295,6 @@ const AuthContextProvider = ({ children }) => {
   // check if the user is authenticated or not
   useEffect(() => {
     isAuthIdValid();
-    console.log("times");
   }, [isAuthIdValid]);
   return <authCtx.Provider value={storeObj}>{children}</authCtx.Provider>;
 };

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.errorPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--sidebar-bg-dark);
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gif {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.content .main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.3rem;
+  padding: 0.7rem 0;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background: var(--sidebar-bg-dark); /* Changed to dark theme */
+  color: var(--sidebar-highlight); /* Changed to highlight color */
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.redirectButton {
+  padding: 1rem;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background: var(--sidebar-highlight); /* Changed to dark theme */
+  color: var(--sidebar-bg-dark); /* Changed to highlight color */
+  font-size: 1.3rem;
+  font: bold;
+  cursor: pointer;
+}

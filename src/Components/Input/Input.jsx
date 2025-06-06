@@ -12,6 +12,8 @@ import ResumeIcon from "../../assets/Icons/resume.png";
 import PauseIcon from "../../assets/Icons/pause.png";
 import { updateTimeSpent } from "../../helper/helper";
 import { authCtx } from "../../store/auth-context";
+import toast from "react-hot-toast";
+import { min } from "@tensorflow/tfjs";
 const Input = () => {
   const hoursRef = useRef(0);
   const minutesRef = useRef(0);
@@ -90,25 +92,31 @@ const Input = () => {
   const submitHandler = (e) => {
     e.preventDefault();
   };
+
   const startButtonHandler = () => {
-    hours.current = hoursRef.current.value;
-    minutes.current = minutesRef.current.value;
+    hours.current = hoursRef.current.value ? +hoursRef.current.value : 0;
+    minutes.current = minutesRef.current.value ? +minutesRef.current.value : 0;
+    console.log(hours.current, minutes.current);
     if (hours.current > 24) {
-      alert("Please enter the hours less than or equal to 24 hours");
+      toast.error("Please enter the hours less than or equal to 24 hours", {
+        className: "text-5xl",
+      });
       return;
     } else if (minutes.current >= 60) {
-      alert("Please enter the valid minutes");
+      toast.error("Please enter the valid minutes", {
+        className: "text-5xl",
+      });
       return;
     } else if (!minutes.current && !hours.current) {
-      alert("Please enter some values");
+      toast.error("Please enter some values", {
+        className: "text-5xl",
+      });
       return;
     }
     endTimer().then(() => {
       startTimer();
     });
   };
-
-  // #021420
 
   const timeChangeHandler = (selectedTime) => {
     const time = selectedTime;
@@ -138,7 +146,7 @@ const Input = () => {
               className="flex flex-col justify-center items-center"
               onSubmit={submitHandler}
             >
-              <div className="time_container flex  justify-center items-center  bg-[#00000093] w-x h-x rounded-round z-10 ">
+              <div className="time_container flex  justify-center items-center  bg-[#00000093] w-x h-[40vh] rounded-3xl z-10 ">
                 <div className="flex gap-3">
                   <input
                     ref={hoursRef}
@@ -167,7 +175,7 @@ const Input = () => {
           )}
           {!timerVisibility && (
             <div>
-              <div className="absolute top-20 right-10 z-20">
+              <div className="absolute top-8 right-10 z-20">
                 <button
                   onClick={menuHandler}
                   className="text-3xl border-l-4 border-b-4 border-bgl  bg-white px-3 py-3 rounded-lg"

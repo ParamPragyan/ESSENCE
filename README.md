@@ -18,23 +18,25 @@ Things that make Essence an essential part of a software developer's life👩‍
 
 > ### Be mindful of the most essential thing in your life while you work on building your next crazy idea💫
 
-
 **Note:** Essence is currently under development. We are working very hard on it and it'll be up and running before you _git init_ your next project. Until then please feel free to tinker around with the public codebase✌️
 
 ## Screen Previews
+
 <blockquote><b><i>home page</i></b></blockquote>
 
-![image](https://github.com/EssenceHQ/.github/assets/54448525/fdf6b046-7292-41cc-9a89-cfe5df0950ce)
+![image](./src/assets/images/home.png)
+
 <blockquote><b><i>dashboard</i></b></blockquote>
 
-![image](https://github.com/EssenceHQ/.github/assets/54448525/7305006c-265d-4512-ace8-85a18e8ce8b9)
+![image](./src/assets/images/dashboard.png)
+
 <blockquote><b><i>stats page</i></b></blockquote>
 
-![image](https://github.com/EssenceHQ/.github/assets/54448525/b16043dc-f446-4671-8a53-59226bfdfd60)
+![image](./src/assets/images/analytics.png)
 
-Try out the beta live - [ESSENCE-WEB](essence-omega.vercel.app/)
+Try out the beta live - [ESSENCE-WEB](https://essence-omega.vercel.app/home)
+
 <blockquote><i>The issue with the live link will be resolve soon.</i></blockquote>
-
 
 ## Technology Used:
 
@@ -43,18 +45,21 @@ Try out the beta live - [ESSENCE-WEB](essence-omega.vercel.app/)
 3. **express.js**
 4. **MongoDB**
 5. **TensorflowJS(posenet model)**
-5. **TailwindCSS**
+6. **TailwindCSS**
 
 ## Getting Started
 
 1. Clone both the repository to your local machine:
->  front-end
+   > front-end
+
 ```bash
-git clone https://github.com/EssenceHQ/essence-frontend.git
+git clone https://github.com/ParamPragyan/ESSENCE.git
 ```
->  back-end
+
+> back-end
+
 ```bash
-git clone https://github.com/EssenceHQ/essence-backend.git
+git clone https://github.com/ParamPragyan/ESSENCE-backend.git
 ```
 
 2. Navigate to the project's directory:
@@ -73,16 +78,21 @@ yarn
 ```bash
 npm install
 ```
+
 <br>
 
 ## Running the App
 
 To run the app in development mode, use the following command in both the repository:
->frontend
+
+> frontend
+
 ```bash
 yarn dev
 ```
->backend
+
+> backend
+
 ```bash
 nodemon server.js
 ```
@@ -90,10 +100,8 @@ nodemon server.js
 <br>
 
 ## Credentials:
+
 ```bash
 login: user111@gmail.com
 password: 123456
 ```
-
-## Checkout the Organizaion:
-https://github.com/EssenceHQ

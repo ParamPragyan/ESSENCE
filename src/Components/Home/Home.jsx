@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { authCtx } from "../../store/auth-context";
 import Button from "../UI/Button";
@@ -15,12 +15,20 @@ import bgIcon from "../../assets/Icons/bg-icon.png";
 import bgIcon2 from "../../assets/Icons/medical.png";
 import CopyRight from "../Footer/CopyRight";
 
-const Home = ({ showAuthHandler }) => {
+const Home = ({ showAuthHandler, register, setRegister }) => {
   const authContext = useContext(authCtx);
   console.log(authContext);
-
+  const navigate = useNavigate();
   const logoutHandler = () => {
     authContext.logout();
+  };
+
+  const redirectToDashboardHandler = () => {
+    if (authContext.userInfo.isLoggedIn) {
+      navigate("/dashboard");
+    }
+    showAuthHandler();
+    setRegister(false);
   };
   return (
     <div className="h-[100vh] relative overflow-hidden flex flex-col justify-around max-md:justify-between w-full bg-bgd home">
@@ -40,7 +48,13 @@ const Home = ({ showAuthHandler }) => {
             ></Button>
           ) : (
             <div>
-              <button className=" text-bgl max-lg:hidden font-[Righteous] cursor-pointer  text-b1">
+              <button
+                onClick={() => {
+                  showAuthHandler();
+                  setRegister(false);
+                }}
+                className=" text-bgl max-lg:hidden font-[Righteous] cursor-pointer  text-b1"
+              >
                 Login
               </button>
               <button
@@ -94,9 +108,9 @@ const Home = ({ showAuthHandler }) => {
 
           <div className="nav-btn-container mt-10  ">
             <button className="navbtn ">
-              <NavLink
+              <div
                 className="nav-link flex items-center border border-bgl relative overflow-hidden text-bght font-[Montserrat] font-[600] rounded-[20rem] text-b1 p-8 pr-28"
-                to="/dashboard"
+                onClick={redirectToDashboardHandler}
               >
                 Get Started
                 <div className="icon-btn py-8 w-16  rounded-round mr-4  bg-bght absolute flex items-center justify-center">
@@ -113,7 +127,7 @@ const Home = ({ showAuthHandler }) => {
                     ></path>
                   </svg>
                 </div>
-              </NavLink>
+              </div>
             </button>
           </div>
         </div>
@@ -135,32 +149,11 @@ const Home = ({ showAuthHandler }) => {
         </div>
       </div>
       <div className="icon-container flex max-lg:flex-col items-center justify-between mx-52 max-lg:mb-10 max-lg:mx-0">
-        {/* <ul className="icons flex items-center justify-center gap-8">
-          <li>
-            {" "}
-            <a href="">
-              <img src={linkdin} alt="" />
-            </a>{" "}
-          </li>
-          <li>
-            {" "}
-            <a href="">
-              <img src={github} alt="" />{" "}
-            </a>{" "}
-          </li>
-          <li>
-            {" "}
-            <a href="">
-              <img src={twitter} alt="" />
-            </a>{" "}
-          </li>
-        </ul> */}
-
         <ul className="icons flex gap-10 ml-4 max-lg:ml-0 max-lg:w-full items-center justify-center max-md:mb-10">
           <li>
             {" "}
             <a
-              href="https://www.linkedin.com/company/essencehq"
+              href="https://github.com/EssenceHQ/essence-frontend"
               target="_blank"
             >
               <FaLinkedinIn className=" icon w-11 h-11 text-bgl" />
@@ -174,7 +167,7 @@ const Home = ({ showAuthHandler }) => {
           </li>
           <li>
             {" "}
-            <a href="https://twitter.com/parampragyan" target="_blank">
+            <a href="https://x.com/parampragyan" target="_blank">
               <BsTwitter className="icon w-11 h-11 text-bgl" />
             </a>{" "}
           </li>

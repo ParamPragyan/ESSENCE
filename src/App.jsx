@@ -9,6 +9,7 @@ import {
 import HomePage from "./Pages/HomePage";
 import DashBoardPage from "./Pages/DashBoardPage";
 import Stats from "./Components/Stats/Stats";
+import ErrorPage from "./Components/Error/Error";
 const router = createBrowserRouter([
   { path: "/", element: <Navigate to="/home"></Navigate> },
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/stats/:id",
     element: <Stats></Stats>,
+  },
+  {
+    path: "*",
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 function App() {

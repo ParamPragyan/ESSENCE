@@ -3,8 +3,7 @@ import { useRef, useContext, useState } from "react";
 import Button from "../../UI/Button";
 import { authCtx } from "../../../store/auth-context";
 import toast from "react-hot-toast";
-const SignUp = ({ showAuthHandler }) => {
-  const [register, setRegister] = useState(true);
+const SignUp = ({ showAuthHandler, register, setRegister }) => {
   const userNameRef = useRef("");
   const emailRef = useRef("");
   const passwordRef = useRef("");

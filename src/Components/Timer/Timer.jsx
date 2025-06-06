@@ -88,7 +88,7 @@ const Timer = ({ hour, minute, camra, pause, cancelHandler }) => {
     };
   }, [pause]);
   return (
-    <div className="text-slate-50 flex items-center flex-col justify-center bg-[#00000093] w-x h-x rounded-round time_container">
+    <div className="text-slate-50 flex items-center flex-col justify-center bg-[#00000093] w-x h-[40vh] rounded-3xl time_container">
       <div className="text-xxl font-la flex items-center justify-center">
         <span>{time.hours < 10 ? `0${time.hours}` : `${time.hours}`}:</span>
         <span>

@@ -1,0 +1,57 @@
+@keyframes grow {
+  from {
+    width: 0;
+    padding: 6px 0;
+    color: transparent;
+  }
+}
+
+.award {
+  position: absolute;
+  z-index: 1;
+  height: 20vh;
+  top: 0;
+}
+
+.ribbon {
+  position: relative;
+  width: 75px;
+  padding: 6px 12px;
+  background-color: #333333;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 28px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 5px 0 5px 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  animation: grow 1s both cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.ribbon span {
+  display: block;
+}
+
+.ribbon span strong {
+  color: white;
+  text-transform: uppercase;
+}
+
+.ribbonTop {
+  z-index: 1;
+  transform: skewY(20deg);
+  border-radius: 0 5px 0 5px;
+}
+
+.ribbonTop span {
+  transform: skewY(-20deg) rotateZ(20deg);
+}
+
+.ribbonBottom {
+  transform: skewY(-20deg) translateY(15px);
+  background: linear-gradient(45deg, #333333, #1a1a1a);
+}
+
+.ribbonBottom span {
+  transform: skewY(20deg) rotateZ(-20deg);
+}
